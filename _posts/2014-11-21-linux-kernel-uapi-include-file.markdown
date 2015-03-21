@@ -2,7 +2,8 @@
 layout: post
 title:  "Linux kernel uapi header file"
 date:   2014-11-21 14:34:25
-tags:   linux, kernel, uapi
+tags:   [linux, kernel, uapi, header]
+category: linux
 ---
 
 Linux在3.7以後把很多header file移到 include/uapi或是arch/xxxx/include/uapi下，感覺起來要追define變得很麻煩，不太清楚為了什麼做這個修改，找了一下看到LWN有一篇文章介紹[The UAPI header file split](http://lwn.net/Articles/507794/)。看起來是個不賴的修正。重點整理如下，

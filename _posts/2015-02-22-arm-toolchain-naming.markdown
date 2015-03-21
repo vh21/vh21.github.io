@@ -3,8 +3,8 @@ layout: post
 title: 'arm toolchain naming'
 date: 2015-02-22 22:57
 comments: true
-tags: GCC, ARM, float
-
+tags: [GCC, ARM, floating point]
+category: toolchain
 ---
 
 之前雖然有看過但常常忘記，還是整理一下好了，主要是整理[1]的文章。

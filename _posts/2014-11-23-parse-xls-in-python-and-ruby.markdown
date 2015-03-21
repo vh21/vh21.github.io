@@ -3,7 +3,8 @@ layout: post
 title: 'Parse excel file in python and ruby'
 date: 2014-11-23 14:33
 comments: true
-tags: ruby, Python, Excel
+tags: [ruby, Python, Excel]
+category: Script
 ---
 個人比較習慣使用python，但是最近要搞Rails的東西，先用python轉再透過其他方式似乎也不是很方便。姑且把相關的資訊一起找一找。由於個人需要parse的檔案是xls格式，先以讀取excel為主做測試。
 

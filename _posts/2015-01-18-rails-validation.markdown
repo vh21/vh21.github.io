@@ -2,7 +2,8 @@
 layout: post
 title: 'rails資料驗證'
 date: 2015-01-18 13:31
-comments: true
+category: web
+tags: [ruby, rails]
 ---
 
 # 輸入資料的前置處理

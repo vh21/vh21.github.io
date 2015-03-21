@@ -3,8 +3,8 @@ layout: post
 title: 'Linux kernel CURRENT implementation'
 date: 2015-03-21 17:00
 comments: true
-tags: linux, kernel, process
-categories:
+tags: [linux, kernel, process]
+categories: Linux
 
 ---
 
