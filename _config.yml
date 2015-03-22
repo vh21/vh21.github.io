@@ -19,10 +19,11 @@ author:
   name: Viller Hsiao
   email: villerhsiao@gmail.com
   github: vh21
-  google-plus: +VillerHsiao
-  slideshare: https://www.slideshare.net/vh21
+  google-plus: VillerHsiao
+  slideshare: vh21
   linkedin: viller-hsiao
-  bio: linux, rails programmer
+  bio: C/C++/Python/Ruby programmer who get insterested in
+       embedded Linux/RTOS and Rails
   email_md5: aa4a9750be84aaf5575d275da6e525bf
 
 rss_path: feed.xml
