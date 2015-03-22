@@ -4,6 +4,7 @@ title: 'rails資料驗證'
 date: 2015-01-18 13:31
 category: web
 tags: [ruby, rails]
+excerpt: '在收到Post資料時，可透過before_validation callback來清理資料或設定預設值'
 ---
 
 # 輸入資料的前置處理
