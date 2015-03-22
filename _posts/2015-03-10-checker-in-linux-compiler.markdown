@@ -3,7 +3,7 @@ layout: post
 title: '__CHECKER__ in linux compiler.h'
 date: 2015-03-10 08:07
 comments: true
-tags: linux, kernel, sparse
+tags: [linux, kernel, sparse]
 category: Linux
 
 ---
