@@ -113,10 +113,8 @@ server 就幫你產生新的 page 了。
 
 ## 其他事項
 
+補上一個quick start 網頁http://jekyllbootstrap.com/usage/jekyll-quick-start.html
+
 據說 logdown 可以幫程式區塊加上標頭，但 jekyll 好像不支援（？），有人改用 Octopress，
 好像有這功能，可參考wen00072的文章
 [安裝octopress並佈署到github Pages上面](http://wen00072.github.io/blog/2015/03/25/octopress-installed-and-deployed-on-the-github-pages/)
-
-
-
-
