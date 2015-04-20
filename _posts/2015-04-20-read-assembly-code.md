@@ -63,7 +63,7 @@ categories: assembly
 
 GNU 體系語法請參考 [binutils as syntax](https://sourceware.org/binutils/docs/as/Syntax.html#Syntax)
 
-# ARM toolchain
+## ARM toolchain
 
 ARM 有自家開發的 toolchain ，從早期的ADS, RVCT 到現在的 DS-5，可參考各自版本的
 [armasm user guide](http://infocenter.arm.com/help/topic/com.arm.doc.dui0473k/DUI0473K_armasm_user_guide.pdf)
