@@ -3,7 +3,7 @@ layout: post
 title: '閱讀assembly code'
 date: 2015-04-20 09:00
 comments: true
-tags: [arm mips as]
+tags: [arm, mips, as, gcc]
 categories: assembly
 ---
 

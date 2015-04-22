@@ -3,7 +3,7 @@ layout: post
 title: 'Thinking Methodically about Performance 整理'
 date: 2015-04-22 21:00
 comments: true
-tags: [arm mips as]
+tags: [performance]
 categories: methodology
 ---
 

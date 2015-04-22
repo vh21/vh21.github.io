@@ -3,7 +3,7 @@ layout: post
 title: 'Setup github page'
 date: 2015-04-09 21:00
 comments: true
-tags: [github blog jekyll]
+tags: [gitpage, jekyll]
 categories: jekyll
 ---
 

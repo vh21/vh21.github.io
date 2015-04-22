@@ -3,7 +3,7 @@ layout: post
 title: 'arm toolchain naming'
 date: 2015-02-22 22:57
 comments: true
-tags: [GCC, ARM, floating point]
+tags: [gcc, arm, floating point]
 category: toolchain
 ---
 
