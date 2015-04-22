@@ -3,15 +3,16 @@ layout: post
 title: 'Thinking Methodically about Performance 整理'
 date: 2015-04-22 21:00
 comments: true
-tags: [performance]
+tags: [performance, methodology]
 categories: methodology
 ---
 
 原作來源：https://queue.acm.org/detail.cfm?id=2413037
-作者：Brendan Gregg, Joyent
+
+作者：Brendan Gregg, Joyent（作者現服務於 Netflix ）
 
 現代的系統由於牽涉到多個 component 間的交互作用，使得系統效能分析越來越難鑑識出 bottleneck 的來源。
-以往的 methodolody 有的缺乏科學化分析，有的則是曠日費時。所以作者提出一個可以快速分析的方法，
+以往的 methodolody 有的缺乏科學化分析，有的則是曠日費時。所以作者提出一個可以快速分析的方法
 `USE Method`，希望可以在效能分析的早期，快速的定位出系統性 bottleneck 的方向。之後再搭配其他的
 methodology 找出真的問題。
 
@@ -33,7 +34,7 @@ network error number 等。有些較難分析的部分也許必須自行客製�
 
 最後就是針對這些量測出來的數據分析了。作者對於指標的解讀提出了一些建議，
 
-* utilization： 100% 的使用率通常是瓶頸的徵兆。高使用率（例：超過 60％）有可能開始造成其他問題的發生。
+* utilization：100% 的使用率通常是瓶頸的徵兆。高使用率（例：超過 60％）有可能開始造成其他問題的發生。
   * 量測通常是取一對時間平均，所以測量到高使用率，比如說總計 60% 使用率，可能隱藏短時間達到 100% 使用率。
   * 再來，有些系統資源操作中通常無法被中斷，如硬碟，一旦使用率在60%以上，在 queue 等待的延遲可能會越來越頻繁越顯著。
 * saturation： 任何程度的 saturation 都可能是問題（非零）。可以以一個等待 queue 的長度或是花在等待 queue 的時間來測量。
@@ -42,4 +43,3 @@ network error number 等。有些較難分析的部分也許必須自行客製�
 
 USE method 辨認出可能是系統瓶頸的問題。不幸的系統可能出現超過一個 performance issue，所以第一個你找到的可能是
 其中一個但不是真正的問題。你可以使用更進一步的 methodology 來調查每一個發現的結果。
-
