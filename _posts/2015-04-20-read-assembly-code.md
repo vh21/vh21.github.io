@@ -38,7 +38,6 @@ categories: assembly
 * [Neon](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0489e/CJAJIIGG.html)
 * [MIPS SIMD](http://www.imgtec.com/mips/architectures/simd.asp)
 
-
 等。請參閱各自的 instrction set manual 或是找 Quick Referece Card 當索引，通常在 CPU 的網頁上都有。
 或是詢問 google 大神看看。
 
@@ -93,4 +92,11 @@ MIPS 的部分請參考 [MIPS Dependent Features](https://sourceware.org/binutil
 
 好吧，如果你要在 C code 裡嵌入 assembly code 或是要查閱一些相關語法可參考
 [GCC-Inline-Assembly-HOWTO](http://www.ibiblio.org/gferg/ldp/GCC-Inline-Assembly-HOWTO.html)
+
+# Other references
+
+這邊找到一份 GNU ARM 的 [quick start guide](http://www.ic.unicamp.br/~celio/mc404-2014/docs/gnu-arm-directives.pdf)
+但是看起來年代可能有點久了， ABI 的部分建議改看
+[AAPCS, Procedure Call Standard for the ARM Architecture](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042e/IHI0042E_aapcs.pdf)。
+其他就看 assembler 的 manual吧。
 
