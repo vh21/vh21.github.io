@@ -30,9 +30,8 @@ rss_path: feed.xml
 categories_path: categories.html
 tags_path: tags.html
 
-BASE_PATH: 
+BASE_PATH:
 
 redcarpet:
-    extensions: [tables, autolink]
-
+    extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 
