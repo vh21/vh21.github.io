@@ -95,7 +95,7 @@ static int sched_cpu_inactive(struct notifier_block *nfb,
 And `sched_cpu_inactive()` is a notification callback of CPU Hotplug. Therefore
 CPU is marked as inactive when we trying to put it into offline. At this time,
 `cpu_online_mask` is still set, but nevertheless scheduler should not migrate any
-tasks to it.
+task to it.
 
 
 # Reference
