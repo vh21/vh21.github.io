@@ -14,7 +14,7 @@ defaults:
     values:
       title: "#define VILLER_HSIAO"
 
-description: All about Embedded RTOS/Linux and Rails
+description: All about C/C++/Python, Embedded Linux/RTOS, and Web programming
 author:
   name: Viller Hsiao
   email: villerhsiao@gmail.com
@@ -22,13 +22,13 @@ author:
   google-plus: VillerHsiao
   slideshare: vh21
   linkedin: viller-hsiao
-  bio: C/C++/Python/Ruby programmer who get interested in
-       embedded Linux/RTOS and Rails
+  bio: All about C/C++/Python, Embedded Linux/RTOS, and Web programming
   email_md5: aa4a9750be84aaf5575d275da6e525bf
 
 rss_path: feed.xml
 categories_path: categories.html
 tags_path: tags.html
+about_path: about.html
 
 BASE_PATH:
 
