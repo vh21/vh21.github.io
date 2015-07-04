@@ -12,7 +12,7 @@ defaults:
     scope:
       path: "" # empty string for all files
     values:
-      title: "#define VILLER_HSIAO"
+      title: "#define _VILLER_H_"
 
 description: All about C/C++/Python, Embedded Linux/RTOS, and Web programming
 author:
