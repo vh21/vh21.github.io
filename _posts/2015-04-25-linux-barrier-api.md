@@ -37,3 +37,7 @@ reads are ordered before reads, writes before writes, and reads before writes, b
 提到可能有一部份原本的 memory barrier 會改用這個 API 來實作。感覺起來 kernel 這幾年不斷針對 lock 與 barrier
 方面進行更細部的控制阿。
 
+## 後記
+後來看了 barrier 相關資訊後發現之前的描述不是很正確，應該說這個 primitive 是屬
+於 `one way barrier`，只確保其中一個方向的 order，主要是確保 critical section
+裡的資料與外面可以維持正確的 order。
