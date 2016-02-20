@@ -41,6 +41,25 @@ Linux/RTOS and Python, Web programming.
 
 * [Commits to F9 Microkernel](https://github.com/f9micro/f9-kernel/commits?author=vh21)
 
+### Tech Tree
+
+* C/C++: Fluent/Experienced
+  * Drivers/BSP programming
+  * OS porting for CPU architecture
+  * Solution framework
+    * Linux/uCOS-II/RTX/mbed-OS
+
+* Python: Familiar
+  * Automation tools
+  * Regressions
+  * Web crawler
+
+* Ruby/Rails: Experienced
+  * 2+ rails projects for fun. Used components as bootstrap, eleasticsearch.
+
+* HTML5: Experienced
+  * ionic, bootstrap
+
 ### License of My Blog
 Except where otherwise noted, content on this site is licensed under a
 [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/)
