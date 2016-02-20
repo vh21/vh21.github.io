@@ -29,9 +29,9 @@ smp 的情況下，我們通常會加上一些 memory barrier 來防止這樣的
 
 x86 提供另一種 CPU 的 support，可以做到
 
-```
+~~~
 reads are ordered before reads, writes before writes, and reads before writes, but not writes before reads.
-```
+~~~
 
 基本上除了原本的 read/write barrier 外，針對 read 跟 write 同時發生時的微調（rule: reads before writes）。文中
 提到可能有一部份原本的 memory barrier 會改用這個 API 來實作。感覺起來 kernel 這幾年不斷針對 lock 與 barrier

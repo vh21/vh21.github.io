@@ -7,30 +7,30 @@ tags: [linux, kernel, eudyptula challenge]
 categories: linux
 ---
 
-```
+~~~
 The Eudyptula Challenge is a series of programming exercises for the Linux
 kernel, that start from a very basic "Hello world" kernel module, moving on up
 in complexity to getting patches accepted into the main Linux kernel source
 tree.
-```
+~~~
 
 最近看到有人重貼[Eudyptula Challenge](http://eudyptula-challenge.org/)，碰
 Linux Kernel 也一陣子了。想說來試看看好了。興沖沖連到首頁後，
 
-```
+~~~
 Email little at eudyptula-challenge.org and say that you want to join in. ....
-```
+~~~
 
 看到這裡二話不說立刻就寄信了。結果完全忘了信件的格式必須是 plain text。果然被
 打槍了，lol
 
-```
+~~~
 Really?  You send me HTML email after being told explicitly not to?
 
 What type of script do you think I am?
 
 Please fix your email client and try again.
-```
+~~~
 
 更正後就取得第一個作業，Hellod World module。這次謹慎多了，雖然是一個簡單的
 module 但還是好好看看文件再開始。 kernel module 相關的編譯環境可參考 kernel
@@ -53,9 +53,9 @@ google 快速找解法。
 
 最後，我很喜歡 Little Penguin 的 mail 裡的話，
 
-```
+~~~
 Fourthly, this challenge is meant to be done over a period of time.
 Don't rush things, there's no hurry, I'm not going anywhere, and neither
 are you.  So sit back, take your time, and enjoy the process.  Life is
 about the journey, not the end result, as that's the same for everyone.
-```
+~~~

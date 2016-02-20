@@ -27,7 +27,7 @@ Until now, we can roughly see that `possible` and `present` mask might means tha
 
 It's quite clear to get their differences from comments of `cpumask.h`.
 
-```
+~~~
 If HOTPLUG is enabled, then cpu_possible_mask is forced to have
 all NR_CPUS bits set, otherwise it is just the set of CPUs that
 ACPI reports present at boot.
@@ -35,7 +35,7 @@ ACPI reports present at boot.
 If HOTPLUG is enabled, then cpu_present_mask varies dynamically,
 depending on what ACPI reports as currently plugged in, otherwise
 cpu_present_mask is just a copy of cpu_possible_mask.
-```
+~~~
 
 however it should be architecture dependent. In ARM architecture, there are two ways to mark
 a CPU as `possible`, in either device tree or `smp_init_cpus()` machine-implemented operation.
@@ -50,7 +50,7 @@ It's quite ambigious to get their differences from boot procedure. They are just
 
 According to the implementation of [`set_cpu_online()`](http://lxr.free-electrons.com/source/kernel/cpu.c?v=3.19#L769)
 
-```
+~~~
 void set_cpu_online(unsigned int cpu, bool online)
 {
         if (online) {
@@ -60,14 +60,14 @@ void set_cpu_online(unsigned int cpu, bool online)
                 cpumask_clear_cpu(cpu, to_cpumask(cpu_online_bits));
         }
 }
-```
+~~~
 
 `cpu_online_bits` and `cpu_active_bits` are enabled at the same time. It will be more clear to see
 their difference from the procedure of removing CPU in Hotplug.
 
 From [1], we can see the procedure of CPU going offline,
 
-```
+~~~
 CPUs going offline have four notification phases: CPU DOWN PREPARE (which might
 run on any CPU), CPU DYING (which runs with interrupts disabled on the offlining
 CPU while all other CPUs are spinning waiting), CPU DEAD (which runs on some other
@@ -75,11 +75,11 @@ CPU after the CPU has gone offline), and CPU POST DEAD (which runs on some
 other CPU after some of the CPU-hotplug locks have been dropped). The CPU UP
 PREPARE and CPU DOWN PREPARE notifiers are permitted to “fail”, in other words,
 to refuse to allow the hotplug operation to proceed.
-```
+~~~
 
 In [`sched_cpu_inactive()`](http://lxr.free-electrons.com/source/kernel/sched/core.c?v=3.19#L5357)
 
-```
+~~~
 static int sched_cpu_inactive(struct notifier_block *nfb,
                                         unsigned long action, void *hcpu)
 {
@@ -90,7 +90,7 @@ static int sched_cpu_inactive(struct notifier_block *nfb,
         switch (action & ~CPU_TASKS_FROZEN) {
         case CPU_DOWN_PREPARE:
                 set_cpu_active(cpu, false);
-```
+~~~
 
 And `sched_cpu_inactive()` is a notification callback of CPU Hotplug. Therefore
 CPU is marked as inactive when we trying to put it into offline. At this time,

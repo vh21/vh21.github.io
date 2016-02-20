@@ -43,11 +43,11 @@ jekyll 的設定值在根目錄的 `_config.yml` 。看起來算好改，基本�
 開就對了。`tables` 決定你的table能不能正常顯示，`autolink` 如果你有寫 `http://` 開頭的東西會
 自動幫你改成連結，預設不會。所以我這幾個設定如下，
 
-```
+~~~
 markdown: redcarpet
 redcarpet:
     extensions: [tables, autolink]
-```
+~~~
 
 其他的設定值可參考 http://jekyllrb.com/docs/configuration/ 修改。
 
@@ -60,26 +60,26 @@ redcarpet:
 
 如
 
-```
+~~~
   old logdown article
   ` ` `
   code block
   ` ` `
-```
+~~~
 
 要改成
 
-```
+~~~
   old logdown article
 
   ` ` `
   code block
   ` ` `
-```
+~~~
 
 如果沒有舊文章，就看看別人的 github page 的文章來當template吧。需要有一個 header
 
-```
+~~~
 ---
 layout: post
 title: 'Setup github page'
@@ -90,7 +90,7 @@ categories: jekyll
 
 my markdown article .....
 
-```
+~~~
 
 語法可參考
 https://help.github.com/articles/markdown-basics/ 與
@@ -100,10 +100,10 @@ https://help.github.com/articles/github-flavored-markdown/。
 
 上傳前，如果有裝 jekyll 可以先在repository的根目錄下
 
-```
+~~~
 %  jekyll serve
 
-```
+~~~
 
 此時會幫你產生最後的靜態網頁，並啟動一個 http server，所以可以從 http://localhost:4000 看到
 demo。可以 review 一下文章是否有出現如你想要的結果。

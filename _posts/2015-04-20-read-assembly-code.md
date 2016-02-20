@@ -20,9 +20,9 @@ categories: assembly
 
 基本上對於相同的 CPU 來說是固定的，比較不會隨著 assembler 不同。如
 
-```
+~~~
     MVNNE   r11, #0xF000000B
-```
+~~~
 
 每個 CPU 可能會有不同 version 的 [instruction set architecture (ISA)](http://en.wikipedia.org/wiki/List_of_instruction_sets)
 如，
@@ -51,15 +51,15 @@ categories: assembly
 如果你的 assembly file 使用 gcc 編譯，gcc 對於一些預設的副檔名有不同的處理流程，如`.S`會先
 經過 preprocessing 處理，所以你可以使用如 C 語言的
 
-```
+~~~
 #include <foo.h>
-```
+~~~
 
 與 macro
 
-```
+~~~
 #define ADD3(a,b,c)   add a, b, a; add a, c, a;
-```
+~~~
 
 `.s` 預設不會，但可在編譯時加上參數 `-X assembler-with-cpp` 讓它也可以處理這些部分。
 
@@ -76,9 +76,9 @@ ARM 的 [information center](http://infocenter.arm.com/help/index.jsp) 有齊全
 
 給 assembler 看的一些特殊語法，如
 
-```
+~~~
  .data
-```
+~~~
 
 標記接下來的東西都放到 `.data` section。這部分同時會跟 assembler 與 architecture 有關。
 

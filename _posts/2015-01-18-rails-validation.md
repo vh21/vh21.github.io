@@ -13,11 +13,11 @@ excerpt: '在收到Post資料時，可透過before_validation callback來清理�
 # 驗證資料
 透過validates
 
-```ruby
+~~~ ruby
 validates :department, :presence => true  # 確保存在
                        :inclusion => { :in => %w(BU1 BU2) # 選項
                                        :message => "%{value} is not a valid department name"} # 錯誤訊息
-```
+~~~
 
 # Reference
 1. [Ruby on Rails 實戰聖經: ActiveRecord - 資料驗證及回呼](https://ihower.tw/rails4/activerecord-lifecycle.html)

@@ -15,19 +15,19 @@ Linux kernel 為整數資料提供兩種簡單的 atomic 操作，一種是 atom
 instruction 來包裝成 RMW 的 API 即可。Kernel 中是透過 `atomic_t` 來宣告一個
  atomic counter，它的定義如下，
 
-```
+~~~
 typedef struct {
     int counter;
 } atomic_t;
-```
+~~~
 
 封裝在 data structure 中除了有較佳的擴展性外，可避免使用者沒有使用 atmoic API[18]
 直接透過如下列的程式碼存取，因而被轉譯成一般的 load/store 而造成問題。
 
-```
+~~~
 atomic_t my_atom;
 my_atom++;
-```
+~~~
 
 atomic counter API 提供下列幾種操作（`atomic_{read, set}()` 表示 `atomic_read()`
 與 `atomic_set()` 兩組 API，其他雷同），
@@ -36,10 +36,10 @@ atomic counter API 提供下列幾種操作（`atomic_{read, set}()` 表示 `ato
 * `atomic_{read, set}()`：讀或寫通常可由單個 load/store 指令完成，所以通常只是 C
 的實現版本。
 
-    ```
+    ~~~
     #define atomic_read(v)  ACCESS_ONCE((v)->counter)
     #define atomic_set(v,i) (((v)->counter) = (i))
-    ```
+    ~~~
 
 * `atomic_{add, sub, inc, dec}()`：針對 counter 做加減動作， `atomic_{inc, dec}()`
   為加/減 1 的版本。函數實現內部不含 memory barrier。需要確保 counter 與其他變

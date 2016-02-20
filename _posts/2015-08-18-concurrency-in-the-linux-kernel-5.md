@@ -11,20 +11,18 @@ lock 才繼續進行 critical section 的操作。由於深度依賴 atomic inst
 ，primitive 真正的實現都是在每個 architecture 中
 （arch/ARCH/include/asm/spinlock.h），原始的實作有如 [20] 中的 pseudo code，
 
-```
-   typedef int SpinLock;
+        typedef int SpinLock;
 
-   void InitLock(SpinLock *L)
-   {   *L = 0; }
+        void InitLock(SpinLock *L)
+        {   *L = 0; }
 
-   void Lock(SpinLock *L)
-   {   while (TestAndSet(L))
-           ;
-   }
+        void Lock(SpinLock *L)
+        {   while (TestAndSet(L))
+                ;
+        }
 
-   void UnLock(SpinLock *L)
-   {   *L = 0; }
-```
+        void UnLock(SpinLock *L)
+        {   *L = 0; }
 
 相較於 atomic counter， 透過`spin_lock()/spin_unlock()` 我們提供一個可對更複雜
 的資料結構操作的 atomic critical section。由於他小巧的實現，spinlock 可說是 SMP
@@ -46,12 +44,10 @@ softirq/tasklet 與 ISR 間共享時使用，primitive 內會 disable IRQ。
 先搶先贏的方式有時會不公平，然而不公平造成的更大的問題的是當 lock 競爭激烈時所造
 成的效能減損，在 [22] 中提到
 
-```
-On an 8 core (2 socket) Opteron, spinlock unfairness is extremely
-noticable, with a userspace test having a difference of up to 2x
-runtime per thread, and some threads are starved or "unfairly"
-granted the lock up to 1 000 000 (!) times.
-```
+        On an 8 core (2 socket) Opteron, spinlock unfairness is extremely
+        noticable, with a userspace test having a difference of up to 2x
+        runtime per thread, and some threads are starved or "unfairly"
+        granted the lock up to 1 000 000 (!) times.
 
 所以 Nick Piggin 在 2.6.25 中將 x86 實現的 algorithm 改為 ticket spinlock，現今
 被許多 architecture 採用。另外為了防止存取亂序最佳化造成 critical section 裡資料

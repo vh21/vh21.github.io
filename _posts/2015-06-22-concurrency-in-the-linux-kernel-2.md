@@ -43,61 +43,61 @@ CPU 的執行順序，memory barrier 提供這樣的功能。
 volatile 這個關鍵字，保留給 programmer 更多彈性。以下是 linux-3.19 前的實現版
 本，
 
-```
+~~~
      #define ACCESS_ONCE(x) (*(volatile typeof(x) *)&(x))
-```
+~~~
 
 基本上就是在有需要阻止最佳化的地方透過轉換型別來增加 volatile 修飾。如下例
 
-```
+~~~
      static int rcu_gp_in_progress(struct rcu_state *rsp)
      {
          return (ACCESS_ONCE(rsp->completed) !=
                  ACCESS_ONCE(rsp->gpnum));
      }
-```
+~~~
 
 表示我們希望讀取 `rsp->gpnum` 與 讀取 `rsp->completed` 的動作不要被最佳化。
 
 compiler barrier：compiler barrier 本身是一個 sequence point[2]。如同 [4] 中的
 例子，下面的程式
 
-```
+~~~
     int A, B;
     void foo()
     {
         A = B + 1;
         B = 0;
     }
-```
+~~~
 
 有可能在加了 `-O2` 被 reorder 成
 
-```
+~~~
     B = 0;
     A = B + 1;
-```
+~~~
 
 GCC 使用下列的 inline assembly 來表示 compiler barrier
 
-```
+~~~
     asm volatile("" ::: "memory");
-```
+~~~
 
 如同上面的程式碼改寫成以下的方式，我們可以確保編譯時期保持預期的順序。
 
-```
+~~~
     A = B + 1;
     asm volatile("" ::: "memory");
     B = 0;
-```
+~~~
 
 Linux kernel 在`include/linux/compiler-gcc.h` 中定義 compiler barrier macro
 `barrier()` 。
 
-```
+~~~
     #define barrier() __asm__ __volatile__("": : :"memory")
-```
+~~~
 
 ## CPU barrier
 每個 CPU architecture 根據各自的 memory model，通常會提供自己的 barrier
@@ -118,13 +118,13 @@ memory access。
 fine-grained 的控制，在 device driver 中需要同步 CPU 與 IO 中的 memory data 時
 我們就不需要使用作用達到整個系統的 barrier。如同 [9] 中 ARM 的例子，
 
-```
+~~~
     barrier   Call     Explanation
   --------- -------- ----------------------------------
   rmb()     dsb()    Data synchronization barrier - system
   dma_rmb() dmb(osh) data memory barrier - outer sharable
   smp_rmb() dmb(ish) data memory barrier - inner sharable
-```
+~~~
 
 * smp_load_acquire()/smp_store_release()：這部分是單向的 barrier。 ACQUIRE 確保
 之後所有的 memory operation 都只在 ACQUIRE 之後出現；RELEASE 則是確保之前所有的

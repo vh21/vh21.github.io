@@ -20,7 +20,7 @@ categories: copyright
 [部落格常見錯誤著作權概念及常見授權方式](http://www.tipo.gov.tw/ct.asp?xItem=206773&ctNode=6988&mp=1)
 ，節錄如下
 
-```
+~~~
 如果向沒有權利授權的人簽署授權契約，並不會發生合法授權的效果，因此，只有向
 著作財產權人或取得其同意可以再授權之人取得授權，才能夠確保自己能夠合法利用
 他人著作。
@@ -32,18 +32,18 @@ categories: copyright
 「改作權」的授權，如果要將多數人的著作編輯成一個編輯著作，則需要取得
 「編輯權」的授權。
 
-```
+~~~
 
 拜訪了一下[Brendan的blog](http://www.brendangregg.com/)，裡面的
 [email page](http://www.brendangregg.com/email.html)有一些常見的FAQ。其中
 有一項提到圖片的著作權，
 
-```
+~~~
 Photos: A number of people have emailed to ask for permission to use photos
 from my website; if you would like to and will acknowledge the photographer (me),
 you are very welcome to do so. I'm glad people enjoy them, and I'm happy to
 know they are useful somehow.
-```
+~~~
 
 看來轉載圖片就不需要再叨擾作者了，但是沒看到文章的部分。
 

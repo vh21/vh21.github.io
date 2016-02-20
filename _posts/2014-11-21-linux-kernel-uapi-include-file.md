@@ -14,49 +14,49 @@ Linux在3.7以後把很多header file移到 include/uapi或是arch/xxxx/include/
 ## 概念
 把userspace API的檔案獨立到 include/uapi跟arch/xxxx/include/uapi下，舉例來說本來header中
 
-```c
-/* Header comments (copyright, etc.) */
-#ifndef _XXXXXX_H     /* Guard macro preventing double inclusion */
-#define _XXXXXX_H
+~~~ c
+ /* Header comments (copyright, etc.) */
+ #ifndef _XXXXXX_H     /* Guard macro preventing double inclusion */
+ #define _XXXXXX_H
 
-[User-space definitions]
-#ifdef __KERNEL__
-[Kernel-space definitions]
-#endif /* __KERNEL__ */
+ [User-space definitions]
+ #ifdef __KERNEL__
+ [Kernel-space definitions]
+ #endif /* __KERNEL__ */
 
-[User-space definitions]
-#endif /* End prevent double inclusion */
-```
+ [User-space definitions]
+ #endif /* End prevent double inclusion */
+~~~
 
 換成如下兩個檔案，
 
 a. kernel space的東西放在原本path並include uapi下同檔名檔案
 
-```c
-/* Header comments (copyright, etc.) */
+~~~ c
+ /* Header comments (copyright, etc.) */
 
-#ifndef _XXXXXX_H     /* Guard macro preventing double inclusion */
-#define _XXXXXX_H
+ #ifndef _XXXXXX_H     /* Guard macro preventing double inclusion */
+ #define _XXXXXX_H
 
-#include <include/uapi/path/to/header.h>
+ #include <include/uapi/path/to/header.h>
 
-[Kernel-space definitions]
+ [Kernel-space definitions]
 
-#endif /* End prevent double inclusion */
+ #endif /* End prevent double inclusion */
 
-/* Header comments (copyright, etc.) */
-```
+ /* Header comments (copyright, etc.) */
+~~~
 
 b. uapi下的檔案，include guard稍微有點不同
 
-```c
-#ifndef _UAPI__XXXXXX_H     /* Guard macro preventing double inclusion */
-#define _UAPI__XXXXXX_H
+~~~ c
+ #ifndef _UAPI__XXXXXX_H     /* Guard macro preventing double inclusion */
+ #define _UAPI__XXXXXX_H
 
-[User-space definitions]
+ [User-space definitions]
 
-#endif /* End prevent double inclusion */
-```
+ #endif /* End prevent double inclusion */
+~~~
 
 ## 好處
 
