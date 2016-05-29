@@ -20,6 +20,8 @@ Linux/RTOS and Python, Web programming.
 
 ### Talks
 
+* May 26 2016, [Introduction to kernel tracing and eBPF](http://www.slideshare.net/vh21/meet-cutebetweenebpfandtracing),
+  for HCSM
 * Jun. 25 2015, [My First Crawler in Python](http://www.slideshare.net/vh21/my-firstcrawlerinpython),
   for HCSM
 * May 24 2015, [Yet Another Introduction to Linux RCU](http://www.slideshare.net/vh21/yet-another-introduction-of-linux-rcu),
