@@ -6,7 +6,7 @@ group: default
 ---
 
 Hello, I am an C/C++/Python programmer who get interested in embedded
-Linux/RTOS and Python, Web programming.
+Linux/RTOS, Python and Web programming.
 
 
 ### Articles
@@ -16,7 +16,7 @@ Linux/RTOS and Python, Web programming.
 
 **Note**
 
-  * Taiwan Linux Kernel Hackers is the Facebook community for Linux Kernel
+  * Taiwan Linux Kernel Hackers is the Facebook community on Linux Kernel
 
 ### Talks
 
@@ -52,9 +52,9 @@ Linux/RTOS and Python, Web programming.
     * Linux/uCOS-II/RTX/mbed-OS
 
 * Python: Familiar
-  * Automation tools
-  * Regressions
-  * Web crawler
+  * Writing some automation tools
+  * Program regression flows
+  * Some web crawlers for fun
 
 * Ruby/Rails: Experienced
   * 2+ rails projects for fun. Used components as bootstrap, eleasticsearch.
