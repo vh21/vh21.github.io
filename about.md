@@ -20,6 +20,8 @@ Linux/RTOS, Python and Web programming.
 
 ### Talks
 
+* Aug. 21 2016, [COSCUP 2016 - Linux Kernel Tracing](http://www.slideshare.net/vh21/linux-kernel-tracing),
+  for COSCUP2016
 * May 26 2016, [Introduction to kernel tracing and eBPF](http://www.slideshare.net/vh21/meet-cutebetweenebpfandtracing),
   for HCSM
 * Jun. 25 2015, [My First Crawler in Python](http://www.slideshare.net/vh21/my-firstcrawlerinpython),
