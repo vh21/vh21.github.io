@@ -9,6 +9,9 @@ Hello, I am an C/C++/Python programmer who get interested in embedded
 Linux/RTOS, Python and Web programming.
 
 
+### Activities
+* Participating in study group in [Taiwan Linux Kernel Hackers](https://www.facebook.com/groups/twlinuxkernelhackers)
+
 ### Articles
 
 * [Cocurrency in Linux Kernel](https://twlinuxkernelhackers.hackpad.com/Concurrency-in-Linux-Kernel-JX3tiL7l2Uo)
@@ -19,7 +22,6 @@ Linux/RTOS, Python and Web programming.
   * Taiwan Linux Kernel Hackers is the Facebook community on Linux Kernel
 
 ### Talks
-
 * Aug. 21 2016, [COSCUP 2016 - Linux Kernel Tracing](http://www.slideshare.net/vh21/linux-kernel-tracing),
   for COSCUP2016
 * May 26 2016, [Introduction to kernel tracing and eBPF](http://www.slideshare.net/vh21/meet-cutebetweenebpfandtracing),
